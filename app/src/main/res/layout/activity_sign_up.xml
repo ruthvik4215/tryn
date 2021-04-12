@@ -70,7 +70,7 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/signup_button"
+            android:id="@+id/signupButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
