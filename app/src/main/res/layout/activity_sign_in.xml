@@ -26,17 +26,6 @@
             android:layout_marginBottom="30dp"
             app:srcCompat="@drawable/ic_trynlogo" />
 
-        <EditText
-            android:id="@+id/userName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:ems="10"
-            android:hint="Username"
-            android:inputType="textPersonName"
-            android:padding="12dp"
-            android:textColorHighlight="@color/purple_500"
-            android:textColorLink="@color/purple_500" />
 
         <EditText
             android:id="@+id/userEmail"
@@ -44,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:ems="10"
-            android:hint="E-mail"
+            android:hint="E-mail or username"
             android:inputType="textEmailAddress"
             android:padding="12dp" />
 
@@ -59,22 +48,22 @@
             android:textColor="@color/black" />
 
         <TextView
-            android:id="@+id/existing_account_textview"
+            android:id="@+id/register_account_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="7dp"
             android:layout_marginBottom="7dp"
             android:clickable="true"
             android:gravity="right"
-            android:text="Already have  an account?"
+            android:text="Don't have  an account?"
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/signup_button"
+            android:id="@+id/signin_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
-            android:text="Sign up"
+            android:text="Sign in"
             android:textStyle="bold"
             app:cornerRadius="100dp" />
 
@@ -85,7 +74,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/google_signup_button"
+                android:id="@+id/google_signin_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -99,7 +88,7 @@
                 app:cornerRadius="100dp" />
 
             <Button
-                android:id="@+id/facebook_signup_button"
+                android:id="@+id/facebook_signin_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -114,13 +103,13 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/signUpPhone_textview"
+            android:id="@+id/signInPhone_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:clickable="true"
             android:gravity="center"
-            android:text="Sign up with phone"
+            android:text="Sign In with phone"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold" />
