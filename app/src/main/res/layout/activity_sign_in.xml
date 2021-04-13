@@ -67,6 +67,15 @@
             android:textStyle="bold"
             app:cornerRadius="100dp" />
 
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="or" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -74,7 +83,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/google_signin_button"
+                android:id="@+id/googleSignInButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
