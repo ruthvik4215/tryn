@@ -78,40 +78,41 @@
             android:textStyle="bold"
             app:cornerRadius="100dp" />
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="or" />
 
-            <Button
-                android:id="@+id/google_signup_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:drawableLeft="@drawable/ic_google"
-                android:padding="15dp"
-                android:text="google"
-                android:textColor="#4285F4"
-                android:textStyle="bold"
-                app:backgroundTint="@color/white"
-                app:cornerRadius="100dp" />
+        <Button
+            android:id="@+id/google_signup_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_google"
+            android:padding="15dp"
+            android:text="sign up with google"
+            android:textColor="#4285F4"
+            android:textStyle="bold"
+            app:backgroundTint="@color/white"
+            app:cornerRadius="100dp" />
 
-            <Button
-                android:id="@+id/facebook_signup_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:drawableLeft="@drawable/ic_facebook_logo"
-                android:padding="15dp"
-                android:text="facebook"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                app:backgroundTint="#4bc3ef"
-                app:cornerRadius="100dp" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/facebook_signup_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_facebook_logo"
+            android:padding="15dp"
+            android:text="sign up with facebook"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:backgroundTint="#4bc3ef"
+            app:cornerRadius="100dp" />
 
         <TextView
             android:id="@+id/signUpPhone_textview"

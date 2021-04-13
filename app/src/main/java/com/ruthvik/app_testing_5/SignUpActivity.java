@@ -3,6 +3,7 @@ package com.ruthvik.app_testing_5;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -45,6 +46,8 @@ public class SignUpActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()) {
                                     Toast.makeText(SignUpActivity.this, "Account created successfully!", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(SignUpActivity.this, continueToLoginActivity.class);
+                                    startActivity(intent);
                                 } else {
                                     Toast.makeText(SignUpActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                                 }
