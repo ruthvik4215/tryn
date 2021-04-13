@@ -11,6 +11,12 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.ruthvik.app_testing_5.Adapters.FragmentsAdapter;
 import com.ruthvik.app_testing_5.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,8 +29,27 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("message");
+        myRef.setValue("Welcome, back");
         auth = FirebaseAuth.getInstance();
+
+        binding.viewPager.setAdapter(new FragmentsAdapter(getSupportFragmentManager()));
+        binding.tabLayout.setupWithViewPager(binding.viewPager);
+
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String value = snapshot.getValue(String.class);
+                Toast.makeText(MainActivity.this, ""+value, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
     }
 
     @Override

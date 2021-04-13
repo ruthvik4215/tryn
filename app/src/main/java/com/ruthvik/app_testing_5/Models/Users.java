@@ -53,7 +53,7 @@ public class Users {
         this.userPassword = userPassword;
     }
 
-    public String getUserId() {
+    public String getUserId(String key) {
         return userId;
     }
 

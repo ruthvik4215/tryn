@@ -12,14 +12,14 @@
         <activity android:name=".continueToMainActivity"></activity>
         <activity android:name=".continueToLoginActivity" />
         <activity android:name=".SignInActivity" />
-        <activity android:name=".SignUpActivity">
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

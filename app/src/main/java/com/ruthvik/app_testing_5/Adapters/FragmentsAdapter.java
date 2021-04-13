@@ -43,9 +43,11 @@ public class FragmentsAdapter extends FragmentPagerAdapter {
 
         if(position == 0) {
             title = "CHATS";
-        } else if(position == 1) {
+        }
+        if(position == 1) {
             title = "STATUS";
-        } else if{position == 3} {
+        }
+        if(position == 2) {
             title = "CALLS";
         }
 

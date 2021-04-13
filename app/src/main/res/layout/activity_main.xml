@@ -9,17 +9,20 @@
 
 
     <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:background="@color/purple_500"
-        app:tabIndicatorColor="@color/white"
-        app:tabSelectedTextColor="@color/white"
+        android:background="@color/white"
+        app:tabIndicatorColor="@color/purple_500"
+        app:tabSelectedTextColor="@color/purple_500"
+        app:tabTextColor="@color/purple_200"
         app:tabMaxWidth="0dp"
         app:tabGravity="fill"
         app:tabMode="fixed"
         android:elevation="12dp" />
 
     <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>
