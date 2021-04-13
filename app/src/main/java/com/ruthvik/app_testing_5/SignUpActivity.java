@@ -85,5 +85,19 @@ public class SignUpActivity extends AppCompatActivity {
                         });
             }
         });
+
+        binding.existingAccountTextview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SignUpActivity.this, SignInActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // auto-login
+        if(auth.getCurrentUser() != null) {
+            Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
+            startActivity(intent);
+        }
     }
 }

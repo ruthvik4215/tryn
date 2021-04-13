@@ -48,7 +48,7 @@
             android:textColor="@color/black" />
 
         <TextView
-            android:id="@+id/register_account_textview"
+            android:id="@+id/registerAccountTextview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="7dp"
@@ -59,7 +59,7 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/signin_button"
+            android:id="@+id/signInButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
