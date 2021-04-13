@@ -22,6 +22,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.FirebaseDatabase;
+import com.ruthvik.app_testing_5.Models.Users;
 import com.ruthvik.app_testing_5.databinding.ActivitySignInBinding;
 
 public class SignInActivity extends AppCompatActivity {
@@ -38,6 +40,9 @@ public class SignInActivity extends AppCompatActivity {
 
     GoogleSignInClient mGoogleSignInClient;
 
+    // setting up Database
+    FirebaseDatabase database;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +54,7 @@ public class SignInActivity extends AppCompatActivity {
         // getting instance of Firebase
         auth = FirebaseAuth.getInstance();
         mAuth = FirebaseAuth.getInstance();
+        database = FirebaseDatabase.getInstance();
 
         // hiding the action bar.
         getSupportActionBar().hide();
@@ -152,16 +158,32 @@ public class SignInActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("TAG", "signInWithCredential:success");
+
+                            // firebase auth
                             FirebaseUser user = mAuth.getCurrentUser();
+                            Users users = new Users();
+
+                            // storing data in database for google sign in users
+                            users.setUserId(user.getUid());
+                            users.setUserName(user.getDisplayName());
+                            users.setUserProfilePhoto(user.getPhotoUrl().toString());
+
+                            // storing using uid
+                            database.getReference().child("Users").child(user.getUid()).setValue(users);
+
                             // updateUI(user);
                             Intent intent = new Intent(SignInActivity.this, continueToMainActivity.class);
                             startActivity(intent);
                             Toast.makeText(SignInActivity.this, "Signed in with google", Toast.LENGTH_SHORT).show();
+
                         } else {
+
                             // If sign in fails, display a message to the user.
                             Log.w("TAG", "signInWithCredential:failure", task.getException());
+
                             Toast.makeText(SignInActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             // updateUI(null);
                         }
