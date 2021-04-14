@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("message");
-        myRef.setValue("Welcome, back");
         auth = FirebaseAuth.getInstance();
 
         binding.viewPager.setAdapter(new FragmentsAdapter(getSupportFragmentManager()));

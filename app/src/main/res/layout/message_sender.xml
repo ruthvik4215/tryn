@@ -18,7 +18,7 @@
         android:background="@drawable/sender_bubble_background"
         android:maxWidth="320dp"
         android:maxHeight="600dp"
-        android:minHeight="30dp"
+        android:minHeight="40dp"
         android:layout_alignParentRight="true">
 
         <androidx.constraintlayout.widget.Guideline
