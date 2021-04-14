@@ -50,6 +50,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        if(auth.getCurrentUser() == null) {
+            Intent intent = new Intent(MainActivity.this, SignInActivity.class);
+            startActivity(intent);
+        }
+
     }
 
     @Override

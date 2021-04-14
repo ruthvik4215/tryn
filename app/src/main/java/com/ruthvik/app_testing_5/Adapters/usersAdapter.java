@@ -1,6 +1,7 @@
 package com.ruthvik.app_testing_5.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.ruthvik.app_testing_5.ChatDetailsActivity;
 import com.ruthvik.app_testing_5.Models.Users;
 import com.ruthvik.app_testing_5.R;
 import com.squareup.picasso.Picasso;
@@ -38,6 +40,17 @@ public class usersAdapter extends RecyclerView.Adapter<usersAdapter.ViewHolder> 
         Users users = list.get(position);
         Picasso.get().load(users.getUserProfilePhoto()).placeholder(R.drawable.ic_man).into(holder.image);
         holder.userName.setText(users.getUserName());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, ChatDetailsActivity.class);
+                intent.putExtra("userId", users.getUserId());
+                intent.putExtra("userProfilePhoto", users.getUserProfilePhoto());
+                intent.putExtra("userName", users.getUserName());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

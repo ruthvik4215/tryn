@@ -21,6 +21,14 @@ public class Users {
         this.userPassword = userPassword;
     }
 
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
     public String getUserProfilePhoto() {
         return userProfilePhoto;
     }
@@ -51,14 +59,6 @@ public class Users {
 
     public void setUserPassword(String userPassword) {
         this.userPassword = userPassword;
-    }
-
-    public String getUserId(String key) {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
     }
 
     public String getUserLastMessage() {
