@@ -10,7 +10,7 @@
     android:layout_marginEnd="10dp"
     android:layout_marginRight="10dp"
     android:background="@drawable/reciever_bubble_background"
-    android:maxWidth="320dp"
+    android:maxWidth="400dp"
     android:maxHeight="600dp"
     android:minWidth="100dp"
     android:minHeight="40dp">
@@ -22,9 +22,9 @@
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
         android:inputType="textLongMessage|textMultiLine"
-        android:maxWidth="305dp"
+        android:maxWidth="350dp"
         android:minWidth="100dp"
-        android:text="hello man..am chesthunav nuv busy aa epudu nak repu manam movie ki podam."
+        android:text=" okay then it is your wish to do what ever you want to do ia ma no tinvolved inti"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/recieverTime"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,14 +36,16 @@
         android:id="@+id/recieverTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="4dp"
         android:text="12:00 pm"
-        android:textSize="10dp"
         android:textColor="@color/white"
+        android:textSize="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recieverText" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -51,4 +53,5 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="7dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
