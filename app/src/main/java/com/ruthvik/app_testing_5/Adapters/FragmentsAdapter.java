@@ -45,10 +45,10 @@ public class FragmentsAdapter extends FragmentPagerAdapter {
             title = "CHATS";
         }
         if(position == 1) {
-            title = "STATUS";
+            title = "MY FEED";
         }
         if(position == 2) {
-            title = "CALLS";
+            title = "CAMERA";
         }
 
         return title;
