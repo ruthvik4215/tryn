@@ -9,10 +9,11 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animation_view"
+        android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:layout_gravity="center"
-        app:lottie_rawRes="@raw/availablesoontryn"
+        app:lottie_rawRes="@raw/camera"
+        app:lottie_speed="0.5"
         app:lottie_repeatMode="reverse"
         app:lottie_loop="true"
         app:lottie_autoPlay="true" />
