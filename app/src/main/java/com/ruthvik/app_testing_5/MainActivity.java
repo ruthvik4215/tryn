@@ -20,6 +20,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.ruthvik.app_testing_5.Adapters.FragmentsAdapter;
+import com.ruthvik.app_testing_5.Fragments.CallsFragment;
 import com.ruthvik.app_testing_5.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -73,6 +74,9 @@ public class MainActivity extends AppCompatActivity {
 
         switch(item.getItemId()) {
 
+            case R.id.addUser:
+                Toast.makeText(MainActivity.this, "Users will be updated constantly in current viewing page.", Toast.LENGTH_SHORT).show();
+
             case R.id.settings:
                 bottomSheetDialog = new BottomSheetDialog(MainActivity.this, R.style.SettingsDialog);
                 View sheetView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.settings, findViewById(R.id.settings));
@@ -80,6 +84,11 @@ public class MainActivity extends AppCompatActivity {
                 bottomSheetDialog.show();
 
                 break;
+
+            case R.id.scanner:
+                Intent redirect_to_tryn_scanner = new Intent(MainActivity.this, CallsFragment.class);
+                startActivity(redirect_to_tryn_scanner);
+                Toast.makeText(MainActivity.this, "cooming soon", Toast.LENGTH_SHORT).show();
 
             case R.id.logout:
                 auth.signOut();
