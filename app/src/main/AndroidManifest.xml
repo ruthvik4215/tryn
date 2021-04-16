@@ -9,7 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.App_testing_5">
-        <activity android:name=".actionBar"></activity>
+        <activity
+            android:name=".settings.chatsActivity"
+            android:label="@string/title_activity_chats"></activity>
+        <activity
+            android:name=".settings.appearanceActivity"
+            android:label="@string/title_activity_appearance" />
+        <activity
+            android:name=".settings.accountActivity"
+            android:label="@string/title_activity_account" />
+        <activity
+            android:name=".settings.notificationsActivity"
+            android:label="@string/title_activity_notifications" />
+        <activity
+            android:name=".settings.profileActivity"
+            android:label="@string/title_activity_profile" />
+        <activity android:name=".actionBar" />
         <activity android:name=".ChatDetailsActivity" />
         <activity android:name=".continueToMainActivity" />
         <activity android:name=".continueToLoginActivity" />

@@ -5,11 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -23,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
     FirebaseAuth auth;
+    BottomSheetDialog bottomSheetDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,7 +74,11 @@ public class MainActivity extends AppCompatActivity {
         switch(item.getItemId()) {
 
             case R.id.settings:
-                Toast.makeText(MainActivity.this, "settings", Toast.LENGTH_SHORT).show();
+                bottomSheetDialog = new BottomSheetDialog(MainActivity.this, R.style.SettingsDialog);
+                View sheetView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.settings, findViewById(R.id.settings));
+                bottomSheetDialog.setContentView(sheetView);
+                bottomSheetDialog.show();
+
                 break;
 
             case R.id.logout:
