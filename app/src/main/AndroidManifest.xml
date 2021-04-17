@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.App_testing_5">
+        <activity android:name=".profileActivity"></activity>
         <activity
             android:name=".settings.chatsActivity"
-            android:label="@string/title_activity_chats"></activity>
+            android:label="@string/title_activity_chats" />
         <activity
             android:name=".settings.appearanceActivity"
             android:label="@string/title_activity_appearance" />

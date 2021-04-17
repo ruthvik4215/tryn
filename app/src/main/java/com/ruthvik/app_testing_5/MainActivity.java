@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
@@ -76,19 +77,29 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.addUser:
                 Toast.makeText(MainActivity.this, "Users will be updated constantly in current viewing page.", Toast.LENGTH_SHORT).show();
+                break;
 
-            case R.id.settings:
-                bottomSheetDialog = new BottomSheetDialog(MainActivity.this, R.style.SettingsDialog);
-                View sheetView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.settings, findViewById(R.id.settings));
-                bottomSheetDialog.setContentView(sheetView);
-                bottomSheetDialog.show();
-
+            case R.id.markallread:
+                Toast.makeText(MainActivity.this, "No unread message found", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.scanner:
-                Intent redirect_to_tryn_scanner = new Intent(MainActivity.this, CallsFragment.class);
-                startActivity(redirect_to_tryn_scanner);
-                Toast.makeText(MainActivity.this, "cooming soon", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "coming soon", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.settings:
+                bottomSheetDialog = new BottomSheetDialog(MainActivity.this, R.style.SettingsDialog);
+                View sheetView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.settings, (ViewGroup) findViewById(R.id.settings));
+                sheetView.findViewById(R.id.profileSettings).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(MainActivity.this, profileActivity.class);
+                        startActivity(intent);
+                    }
+                });
+                bottomSheetDialog.setContentView(sheetView);
+                bottomSheetDialog.show();
+                break;
 
             case R.id.logout:
                 auth.signOut();
