@@ -53,7 +53,7 @@
         android:id="@+id/animation_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center"
+        android:layout_gravity="center|right"
         android:layout_margin="5dp"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
