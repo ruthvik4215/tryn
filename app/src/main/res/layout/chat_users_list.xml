@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/userChatDetails"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -24,7 +25,7 @@
         android:src="@drawable/ic_man" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="220dp"
         android:layout_height="match_parent"
         android:layout_marginLeft="10dp"
         android:gravity="center"
@@ -47,5 +48,15 @@
             android:padding="3dp"
             android:text="" />
     </LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/userstatus" />
 
 </LinearLayout>

@@ -26,6 +26,7 @@
         android:minWidth="100dp"
         android:text=" okay then it is your wish to do what ever you want to do ia ma no tinvolved inti"
         android:textColor="@color/white"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/recieverTime"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline2"

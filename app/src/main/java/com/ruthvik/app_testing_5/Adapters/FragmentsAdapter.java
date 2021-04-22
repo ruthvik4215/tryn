@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import com.ruthvik.app_testing_5.Fragments.CallsFragment;
 import com.ruthvik.app_testing_5.Fragments.ChatsFragment;
 import com.ruthvik.app_testing_5.Fragments.StatusFragment;
+import com.ruthvik.app_testing_5.Fragments.profileFragment;
 
 public class FragmentsAdapter extends FragmentPagerAdapter {
     public FragmentsAdapter(@NonNull FragmentManager fm) {
@@ -26,6 +27,8 @@ public class FragmentsAdapter extends FragmentPagerAdapter {
                 return new StatusFragment();
             case 2:
                 return new CallsFragment();
+            case 3:
+                return new profileFragment();
             default:
                 return new ChatsFragment();
         }
@@ -33,7 +36,7 @@ public class FragmentsAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 3;
+        return 4;
     }
 
     @Nullable
@@ -49,6 +52,9 @@ public class FragmentsAdapter extends FragmentPagerAdapter {
         }
         if(position == 2) {
             title = "CAMERA";
+        }
+        if(position == 3) {
+            title = "PROFILE";
         }
 
         return title;
