@@ -41,7 +41,7 @@
 
         <ImageView
             android:id="@+id/sendButton"
-            android:layout_width="45dp"
+            android:layout_width="40dp"
             android:layout_height="45dp"
             android:layout_gravity="center"
             android:layout_marginStart="5dp"
@@ -50,7 +50,7 @@
             android:layout_marginEnd="7dp"
             android:layout_marginRight="7dp"
             android:layout_marginBottom="5dp"
-            android:src="@drawable/ic_send" />
+            android:src="@drawable/ic_right_chevron" />
 
     </LinearLayout>
 
@@ -60,6 +60,7 @@
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:elevation="5dp"
+        android:gravity="center"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme">
 
@@ -72,11 +73,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/ic_left_arrow"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"
-                android:src="@drawable/ic_left_arrow" />
+                app:layout_constraintVertical_bias="0.0" />
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile_image"
@@ -96,12 +98,25 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
+                android:gravity="center|top"
                 android:text="Ruthvik Bemidi"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/profile_image"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/ic_correct"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/userName3"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
