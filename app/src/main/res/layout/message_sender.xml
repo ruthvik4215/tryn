@@ -44,7 +44,7 @@
             android:minWidth="100dp"
             android:text="nik okati thelsa repu nen nik okato cheptha vakani nenu cheptha"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="17sp"
             app:layout_constraintBottom_toTopOf="@+id/senderTime"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="parent"
