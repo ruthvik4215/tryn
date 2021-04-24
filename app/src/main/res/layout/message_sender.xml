@@ -19,6 +19,7 @@
         android:maxWidth="320dp"
         android:maxHeight="600dp"
         android:minHeight="40dp"
+        android:minWidth="50dp"
         android:layout_alignParentRight="true">
 
         <androidx.constraintlayout.widget.Guideline
@@ -39,8 +40,8 @@
             android:layout_marginRight="5dp"
             android:inputType="textLongMessage|textMultiLine"
             android:maxWidth="295dp"
-            android:minWidth="100dp"
-            android:text="nik okati thelsa repu nen nik okato cheptha vakani nenu cheptha"
+            android:minWidth="40dp"
+            android:text="hey bruh"
             android:textColor="@color/black"
             android:textSize="17sp"
             app:layout_constraintBottom_toTopOf="@+id/senderTime"
