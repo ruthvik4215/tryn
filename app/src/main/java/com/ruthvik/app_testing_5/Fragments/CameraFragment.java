@@ -10,9 +10,9 @@ import android.view.ViewGroup;
 
 import com.ruthvik.app_testing_5.R;
 
-public class StatusFragment extends Fragment {
+public class CameraFragment extends Fragment {
 
-    public StatusFragment() {
+    public CameraFragment() {
         // Required empty public constructor
     }
 
@@ -20,6 +20,6 @@ public class StatusFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.myfeed, container, false);
+        return inflater.inflate(R.layout.camera, container, false);
     }
 }

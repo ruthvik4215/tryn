@@ -25,8 +25,10 @@ import java.util.ArrayList;
 
 public class usersAdapter extends RecyclerView.Adapter<usersAdapter.ViewHolder> {
 
+    // This will generate user profile in the chats layout.
     ArrayList<Users> list;
     Context context;
+
 
     public usersAdapter(ArrayList<Users> list, Context context) {
         this.list = list;

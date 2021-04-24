@@ -24,7 +24,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.ruthvik.app_testing_5.Adapters.FragmentsAdapter;
-import com.ruthvik.app_testing_5.Fragments.CallsFragment;
 import com.ruthvik.app_testing_5.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {

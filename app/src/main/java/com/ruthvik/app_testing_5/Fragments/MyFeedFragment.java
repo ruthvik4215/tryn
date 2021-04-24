@@ -10,9 +10,9 @@ import android.view.ViewGroup;
 
 import com.ruthvik.app_testing_5.R;
 
-public class CallsFragment extends Fragment {
+public class MyFeedFragment extends Fragment {
 
-    public CallsFragment() {
+    public MyFeedFragment() {
         // Required empty public constructor
     }
 
@@ -20,6 +20,6 @@ public class CallsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.camera, container, false);
+        return inflater.inflate(R.layout.myfeed, container, false);
     }
 }
