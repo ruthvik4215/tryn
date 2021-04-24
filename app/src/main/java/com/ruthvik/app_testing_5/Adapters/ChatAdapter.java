@@ -73,7 +73,6 @@ public class ChatAdapter extends RecyclerView.Adapter {
             super(itemView);
 
             recieverMessage = itemView.findViewById(R.id.recieverText);
-            recieverTime = itemView.findViewById(R.id.recieverTime);
         }
     }
 

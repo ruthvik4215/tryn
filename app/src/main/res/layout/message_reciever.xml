@@ -6,14 +6,13 @@
     android:layout_height="wrap_content"
     android:layout_marginStart="8dp"
     android:layout_marginLeft="8dp"
-    android:layout_marginTop="5dp"
-    android:layout_marginBottom="5dp"
+    android:layout_marginTop="7dp"
     android:layout_marginEnd="10dp"
     android:layout_marginRight="10dp"
     android:background="@drawable/reciever_bubble_background"
     android:maxWidth="400dp"
     android:maxHeight="600dp"
-    android:elevation="3dp"
+    android:padding="3dp"
     android:minWidth="100dp"
     android:minHeight="40dp">
 
@@ -21,36 +20,22 @@
         android:id="@+id/recieverText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
         android:inputType="textLongMessage|textMultiLine"
         android:maxWidth="350dp"
         android:minWidth="100dp"
         android:text=" okay then it is your wish to do what ever you want to do ia ma no tinvolved inti"
         android:textColor="@color/white"
         android:textSize="17sp"
-        app:layout_constraintBottom_toTopOf="@+id/recieverTime"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/recieverTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="4dp"
-        android:text="12:00 pm"
-        android:textColor="@color/white"
-        android:textSize="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recieverText" />
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"

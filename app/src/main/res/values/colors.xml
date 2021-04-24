@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="chatgreen" >#25D366</color>
+    <color name="chatgrey" >#F1F1F1</color>
 </resources>
